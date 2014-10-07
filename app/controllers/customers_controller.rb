@@ -53,7 +53,7 @@ class CustomersController < ApplicationController
 		#its only allowing these parameters from website - let user change only name of train, not sth different
 		# only allow whitelisted params from the browser
 		def customer_params
-			params.require(:customer).permit(:name)
+			params.require(:customer).permit(:name, :city_id)
 		end
 
 end

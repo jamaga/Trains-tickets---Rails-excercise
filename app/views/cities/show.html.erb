@@ -15,5 +15,13 @@
   <%= @city.population %>
 </p>
 
+<p>
+  <strong>Customers</strong>
+  <% @city.customers.each do |customer| %>
+  <p><%= customer.name %></p>
+  <% end %>
+</p>
+
+
 <%= link_to 'Edit', edit_city_path(@city) %> |
 <%= link_to 'Back', cities_path %>

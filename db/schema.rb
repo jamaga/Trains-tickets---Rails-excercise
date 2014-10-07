@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141007100102) do
+ActiveRecord::Schema.define(version: 20141007101347) do
 
   create_table "cities", force: true do |t|
     t.string   "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20141007100102) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.integer  "city_id"
   end
 
   create_table "tickets", force: true do |t|

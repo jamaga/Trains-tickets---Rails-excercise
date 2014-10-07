@@ -14,7 +14,12 @@
 
 	<%=f.label :name %>
 	<%=f.text_field :name, placeholder: "Customer name" %>
-	
+		<%= f.select :city_id, City.all.collect{ |c| ["#{c.name} (#{c.short_name})", c.id]} %>
 	<%= f.submit %>
 <% end %>
+
 </div>
+
+
+
+
