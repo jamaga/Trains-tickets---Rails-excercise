@@ -82,7 +82,7 @@ end
 		#}
 
 		#if u want to permit to access everything - u can write: (params)permit!
-			params.require(:train).permit(:name, :origin, :destination, :capacity)
+			params.require(:train).permit(:name, :origin, :destination, :capacity, :time)
 
 		end
 end

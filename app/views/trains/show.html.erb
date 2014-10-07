@@ -13,4 +13,8 @@ click <%= link_to "here", edit_train_path(@train) %>
 
 <br/>
 
+The train is leaving at <%= @train.time.to_s(:time) %>
+
+<br/>
+
 <%= link_to "Back", trains_path %>

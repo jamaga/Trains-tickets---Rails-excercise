@@ -1,5 +1,5 @@
 <h1>New ticket</h1>
-
+	<%= @ticket.errors.messages[:time].first if @ticket.errors.any? %>
 
 <%= form_for @ticket do |f| %>
 <%#= form builder helpers - we want to select text fiels! =#%>
@@ -15,7 +15,7 @@
      Train.all.collect { |t| [ t.name, t.id ] },
      include_blank: true %> 
 
-     <br>
+    <br>
 
 	<%= f.submit %>
 
