@@ -1,0 +1,9 @@
+<%= from_for @ticket do |t| %>
+	<ul>
+		<% if @ticket.errors.any? %>
+		<% @ticket.errors.full_messages.each do |message| %>
+		<li><%= message %></li>
+	<% end %>
+<% end %>
+</ul>
+<% end %>

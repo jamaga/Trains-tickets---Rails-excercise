@@ -1,0 +1,11 @@
+<h1> ticket information </h1>
+
+the ticket name is <%= @ticket.name %>
+<br/>
+
+if you want to edit the information about ticket,
+click <%= link_to "here", edit_ticket_path(@ticket) %>
+
+<br/>
+
+<%= link_to "Back", tickets_path %>

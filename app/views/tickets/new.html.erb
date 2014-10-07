@@ -1,0 +1,26 @@
+<h1>New ticket</h1>
+
+
+<%= form_for @ticket do |f| %>
+<%#= form builder helpers - we want to select text fiels! =#%>
+	<%=f.label :customer_id %>
+	<%=f.select :customer_id,
+     Customer.all.collect { |c| [ c.name, c.id ] },
+     include_blank: true %> 
+
+	<br/>
+
+    <%=f.label :train_id %>
+		<%=f.select :train_id,
+     Train.all.collect { |t| [ t.name, t.id ] },
+     include_blank: true %> 
+
+     <br>
+
+	<%= f.submit %>
+
+	<div><%= link_to "Home", root_path %></div>
+<%end %>
+
+<%#= render 'form'   blank above is giving option of blank field%>
+<%#= link_to "show me the tickets", tickets_path %>

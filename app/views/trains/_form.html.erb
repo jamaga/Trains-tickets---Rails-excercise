@@ -1,0 +1,23 @@
+<%= form_for @train do |f| %>
+
+	<% if @train.errors.any? %>
+		<div style ="color:red;">
+<%# we entere here if there has been any validation error %>
+		<% @train.errors.full_messages.each do |message| %>
+			<%= message %>
+		<% end %>
+		</div>
+	<% end %>
+
+
+	<%=f.label :name %>
+	<%=f.text_field :name, placeholder: "Train name" %>
+	<%=f.label :destination %>
+	<%=f.text_field :destination, placeholder: "Destination" %>
+	<%=f.label :origin %>
+	<%=f.text_field :origin, placeholder: "Origin" %>
+	<%=f.label :capacity %>
+	<%=f.text_field :capacity, placeholder: "Capacity" %>
+	<%= f.submit %>
+<% end %>
+

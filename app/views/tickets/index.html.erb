@@ -1,0 +1,12 @@
+<h1>Tickets</h1>
+
+<%= link_to "New ticket", new_ticket_path %>
+	<% @tickets.each do |ticket| %>
+		
+		<p><%= "#{ticket.customer.name if ticket.customer} to #{ticket.train.name if ticket.train}" %></p>
+	<% end %>
+
+<div><%= link_to "Home", root_path %></div>
+
+
+

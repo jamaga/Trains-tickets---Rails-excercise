@@ -1,0 +1,31 @@
+<h1> Howdy! </h1>
+
+
+<%= link_to "new train", new_train_path %>
+<br/>
+<%= link_to "show me all reserved tickets!", tickets_path %>
+<br/>
+<%= link_to "list of all customers", customers_path %>
+<br/>
+All trains:
+
+<ul>
+<% @trains.each do |train| %>
+
+	<li>
+	<%= link_to train.name, train_path(train) %>
+	<%= link_to "Edit", edit_train_path(train) %>
+	<%= link_to "Delete", train_path(train), method: :delete, 
+			data: { confirm: 'are you sure?' } %> 
+	</li>
+
+
+
+
+<% end %>
+</ul>
+
+
+
+
+

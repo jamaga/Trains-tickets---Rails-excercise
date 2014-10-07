@@ -1,0 +1,16 @@
+<h1> train information </h1>
+
+the train name is <%= @train.name %>
+the capacity is <%= @train.capacity %>
+the origin is <%= @train.origin %>
+the destination is <%= @train.destination %>
+
+<br/>
+
+
+if you want to edit,
+click <%= link_to "here", edit_train_path(@train) %>
+
+<br/>
+
+<%= link_to "Back", trains_path %>
